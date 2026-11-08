@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | Tandai Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="checkout-page">
+
+    <header class="checkout-header">
+        <a href="stock.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Shopping
+        </a>
+
+        <h1>Checkout</h1>
+        <p>Complete your order at Tandai Shop.</p>
+    </header>
+
+    <main class="checkout-container">
+
+        <!-- CUSTOMER INFORMATION -->
+        <section class="checkout-form-section">
+
+            <h2>Customer Information</h2>
+
+            <form id="checkoutForm">
+
+                <div class="form-group">
+                    <label for="customerName">Full Name</label>
+                    <input
+                        type="text"
+                        id="customerName"
+                        placeholder="Enter your full name"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customerEmail">Email Address</label>
+                    <input
+                        type="email"
+                        id="customerEmail"
+                        placeholder="Enter your email"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customerPhone">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="customerPhone"
+                        placeholder="Enter your phone number"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customerAddress">Delivery Address</label>
+                    <textarea
+                        id="customerAddress"
+                        rows="4"
+                        placeholder="Enter your complete address"
+                        required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="paymentMethod">Payment Method</label>
+
+                    <select id="paymentMethod" required>
+                        <option value="">Select Payment Method</option>
+                        <option value="Bank Transfer">Bank Transfer</option>
+                        <option value="E-Wallet">E-Wallet</option>
+                        <option value="Cash on Delivery">Cash on Delivery</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="place-order-btn">
+                    Place Order
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ORDER SUMMARY -->
+        <section class="checkout-summary">
+
+            <h2>Order Summary</h2>
+
+            <div id="checkoutItems"></div>
+
+            <div class="summary-total">
+                <span>Total Payment</span>
+                <strong id="checkoutTotal">Rp0</strong>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RECEIPT POP-UP -->
+    <div class="receipt-overlay" id="receiptModal" hidden>
+        <div class="receipt" role="dialog" aria-modal="true" aria-labelledby="receiptTitle">
+
+            <div id="receiptContent"></div>
+
+            <div class="receipt-actions">
+                <button type="button" id="printReceipt">
+                    <i class="fa-solid fa-print"></i> Print
+                </button>
+                <a href="orders.html" class="receipt-primary">
+                    <i class="fa-solid fa-box"></i> View Order
+                </a>
+                <a href="stock.html">Continue Shopping</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
