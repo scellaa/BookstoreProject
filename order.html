@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Orders | Tandai Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="orders-page">
+
+    <header class="orders-header">
+
+        <a href="stock.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Shopping
+        </a>
+
+        <h1>My Orders</h1>
+
+        <p>Track and manage your purchases at Tandai Shop.</p>
+
+    </header>
+
+    <main class="orders-container">
+
+        <div class="orders-heading">
+            <h2>Order History</h2>
+            <span id="orderCount">0 Orders</span>
+        </div>
+
+        <div id="orderList">
+
+            <!-- Order history will appear here -->
+
+        </div>
+
+        <div class="order-empty" id="orderEmpty" hidden>
+
+            <i class="fa-solid fa-box-open"></i>
+
+            <h3>No Orders Yet</h3>
+
+            <p>
+                You haven't placed any orders.
+                Start exploring our book collection!
+            </p>
+
+            <a href="stock.html">Explore Books</a>
+
+        </div>
+
+    </main>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
