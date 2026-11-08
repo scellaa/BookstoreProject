@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Collection and Stock</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="stock-page">
+
+    <div class="stock-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>
+                    <a href="dashboard.html" class="icon">
+                        <i class="fa-solid fa-book"></i>
+                    </a>
+                    Tandai
+                </h2>
+            </div>
+
+            <p class="menu-title">MENU</p>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+
+                <a href="stock.html" class="nav-item active">
+                    <i class="fa-solid fa-layer-group"></i>
+                    Our Collection and Stock
+                </a>
+
+                <div class="category-selection">
+
+                    <label for="bookCategory">
+                        Book Categories
+                    </label>
+
+                    <select id="bookCategory">
+
+                        <option value="all">All Books</option>
+
+                        <option value="textbook">Buku Ajar</option>
+
+                        <option value="romance">Novel Romance</option>
+
+                        <option value="action">Action &amp; Adventure</option>
+
+                        <optgroup label="Horror">
+                            <option value="psychological">
+                                Psychological Horror
+                            </option>
+
+                            <option value="supernatural">
+                                Supernatural Horror
+                            </option>
+                        </optgroup>
+
+                        <option value="beauty">Beauty Tips</option>
+
+                        <option value="sports">Fitness &amp; Sports</option>
+
+                        <option value="cooking">Cooking &amp; Recipes</option>
+
+                        <optgroup label="Children's Books">
+                            <option value="picture">Picture Books</option>
+                            <option value="chapter">Chapter Books</option>
+                            <option value="young-adult">Young Adult</option>
+                        </optgroup>
+
+                        <optgroup label="Language Learning">
+                            <option value="english">
+                                English as a Second Language (ESL)
+                            </option>
+
+                            <option value="foreign">
+                                Foreign Language Learning
+                            </option>
+                        </optgroup>
+
+                    </select>
+
+                </div>
+
+                <a href="dashboard.html#services" class="nav-item">
+                    <i class="fa-solid fa-headset"></i>
+                    Services
+                </a>
+
+                <a href="dashboard.html#contact" class="nav-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    Contact
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <!-- tombol keranjang dan link View Order dipisah
+                     (sebelumnya <a> berada DI DALAM <button>, itu HTML tidak valid) -->
+                <button
+                    type="button"
+                    class="nav-item"
+                    id="shoppingCartBtn"
+                    style="background: transparent; border: none; cursor: pointer;"
+                >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Shopping Cart
+                    <span id="cartCount">0</span>
+                </button>
+
+                <a href="orders.html" class="nav-item">
+                    <i class="fa-solid fa-box"></i>
+                    View Order
+                </a>
+
+                <a href="index.html" class="nav-item" data-logout>
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="stock-main">
+
+            <!-- HEADER -->
+            <div class="stock-header">
+
+                <div>
+                    <h1>Our Collection and Stock</h1>
+
+                    <p>
+                        Explore our book collection and check
+                        the availability of each book.
+                    </p>
+                </div>
+
+                <div class="total-books">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span id="bookCount">0 Books Available</span>
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH BAR -->
+            <div class="stock-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="bookSearch"
+                    placeholder="Search for books..."
+                >
+
+            </div>
+
+
+            <!-- BOOK CATEGORIES SECTION -->
+            <section class="category-section">
+
+                <div class="category-heading">
+                    <h2>Explore Our Categories</h2>
+                    <p>
+                        Find your favorite books from our various
+                        collections and discover something new.
+                    </p>
+                </div>
+
+                <div class="category-container">
+
+                    <!-- Romance -->
+                    <div class="category-card">
+                        <img src="romance.jpg" alt="Romance Books" onerror="this.style.display='none'">
+                        <div class="category-content">
+                            <h3>Romance</h3>
+                            <p>Discover stories about love, relationships, and emotions.</p>
+                            <a href="stock.html?category=romance">Explore Books</a>
+                        </div>
+                    </div>
+
+                    <!-- Action -->
+                    <div class="category-card">
+                        <img src="action.jpg" alt="Action Books" onerror="this.style.display='none'">
+                        <div class="category-content">
+                            <h3>Action</h3>
+                            <p>Enjoy thrilling adventures and exciting journeys.</p>
+                            <a href="stock.html?category=action">Explore Books</a>
+                        </div>
+                    </div>
+
+                    <!-- Psychological -->
+                    <div class="category-card">
+                        <img src="sikoloji.jpg" alt="Psychological Books" onerror="this.style.display='none'">
+                        <div class="category-content">
+                            <h3>Psychological</h3>
+                            <p>Explore stories about the human mind and behavior.</p>
+                            <a href="stock.html?category=psychological">Explore Books</a>
+                        </div>
+                    </div>
+
+                    <!-- Supernatural -->
+                    <div class="category-card">
+                        <img src="horor 1.jpg" alt="Supernatural Books" onerror="this.style.display='none'">
+                        <div class="category-content">
+                            <h3>Supernatural</h3>
+                            <p>Enter mysterious worlds filled with supernatural events.</p>
+                            <a href="stock.html?category=supernatural">Explore Books</a>
+                        </div>
+                    </div>
+
+                    <!-- Beauty -->
+                    <div class="category-card">
+                        <img src="beauty.jpg" alt="Beauty Books" onerror="this.style.display='none'">
+                        <div class="category-content">
+                            <h3>Beauty</h3>
+                            <p>Learn more about beauty, self-care, and personal growth.</p>
+                            <a href="stock.html?category=beauty">Explore Books</a>
+                        </div>
+                    </div>
+
+                    <!-- Sports -->
+                    <div class="category-card">
+                        <img src="sport.jpg" alt="Sports Books" onerror="this.style.display='none'">
+                        <div class="category-content">
+                            <h3>Sports</h3>
+                            <p>Find inspiration through fitness and healthy lifestyles.</p>
+                            <a href="stock.html?category=sports">Explore Books</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- BOOK COLLECTION (cover, title, price, stock) -->
+            <section class="collection-section">
+
+                <div id="bookGrid" class="book-grid">
+                    <!-- Book cards will appear here -->
+                </div>
+
+                <div id="emptyMessage" class="empty-message" hidden>
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    <h3>No Books Found</h3>
+
+                    <p>
+                        Try searching for another book or category.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- SHOPPING CART DRAWER (di luar <main>) -->
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer">
+
+        <div class="cart-header">
+
+            <h2>
+                <i class="fa-solid fa-cart-shopping"></i>
+                Shopping Cart
+            </h2>
+
+            <button id="closeCart" type="button">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">
+                Your shopping cart is empty.
+            </p>
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">Rp0</strong>
+            </div>
+
+            <button id="continueShopping" type="button">
+                Continue Shopping
+            </button>
+
+            <button id="checkoutBtn" type="button">
+                Checkout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
